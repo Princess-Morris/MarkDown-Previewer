@@ -1,7 +1,9 @@
 const Editor = () => {
     return (
-        <div>
-           
+        <div className="editor-wrapper">
+            <textarea className="editor" id="editor">
+
+            </textarea>
         </div>
     )
 }
