@@ -1,9 +1,12 @@
-const Previewer = () => {
+import { marked } from "marked"
+
+const Previewer = ({newHeader}) => {
+  
+    const htmlContent = marked(newHeader);
+
    return (
     <div className="preview-wrapper">
-       <div className="preview" id="preview">
-       Welcome to my react markdown
-       </div>
+        <div className="preview" dangerouslySetInnerHTML={{__html:htmlContent}} />
     </div>
    )
 }
